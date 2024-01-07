@@ -14,7 +14,7 @@ export const specialties:Specialty[]=[
     },
     {
         name:"Psychiatrist",
-        src:"/images/Psychiatrist.svg"
+        src:"/images/psyc.svg"
     },
     {
         name:"Eye Doctor",

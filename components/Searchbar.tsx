@@ -11,15 +11,18 @@ const Searchbar = () => {
         search(searchTerm);
     }
   return (
-    <div className=' flex justify-around items-center mt-32 w-[777.29px] h-[102.38px] bg-transparent bg-opacity-60 rounded-md border-2 border-white backdrop-blur-[35.52px]'>
+    <div className="relative z-10">
+    <div className='flex bg-white justify-around items-center mt-32 w-[48rem] h-24  bg-transparent bg-opacity-60 rounded-md border-2 border-white backdrop-blur-[2rem] '>
     <div className='flex gap-5'>
       <Image
         src="/icons/search.svg"
         alt="search"
         height={26}
         width={26}/>
+      <label htmlFor="clinicSelect" className="relative cursor-pointer">
         <select
-          className="appearance-none bg-transparent border-none leading-tight h-6 opacity-80 text-slate-500 text-xl font-normal focus:outline-none"
+          id="clinicSelect"
+          className="appearance-none w-[6rem] bg-transparent border-none leading-tight h-6 opacity-80 cursor-pointer text-slate-500 text-xl font-normal focus:outline-none"
           value="Clinic"
           defaultValue="Clinic"
         >
@@ -31,16 +34,21 @@ const Searchbar = () => {
           src="/icons/down-arrow.svg"
           alt="drop-down"
           height={18}
-          width={21}/>
+          width={21}
+          className="absolute -right-1 -z-10 top-1/2  -translate-y-1/2"
+        />
+      </label>
     </div>
     <form className="flex" onSubmit={handleFormSubmit}>
         <input type="text" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} className=" bg-transparent outline-none placeholder:text-xl" placeholder="Search by Clinic name"/>
     </form>
-    <button onClick={handleFormSubmit} type="submit" className='px-[36.57px] py-[9.40px] bg-amber-500 text-white rounded-md justify-center items-center gap-[10.45px] inline-flex'>
+    <button onClick={handleFormSubmit} type="submit" className='px-9 py-2 bg-amber-500 text-white rounded-md justify-center items-center gap-2'>
           Find & Book
     </button>
   </div>
+    </div>
   )
 }
 
 export default Searchbar
+

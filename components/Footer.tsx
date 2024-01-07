@@ -7,19 +7,20 @@ const Footer = () => {
           <div className='flex justify-between items-center mt-14 mb-10'>
             <h3 className='text-white text-3xl font-semibold'>Pharmazon</h3>
             <ul className='flex justify-between text-white text-base font-medium gap-12'>
-              <li>
+              <li className="cursor-pointer">
               About Us
               </li>
-              <li>
+              <li className="cursor-pointer">
               Careers
               </li>
-              <li>
+              <li className="cursor-pointer">
               24/7 Support
               </li>
             </ul>
             <ul className='flex justify-between gap-6'>
               <li>
                 <Image
+                className=" cursor-pointer"
                 src="/icons/placeholder.svg"
                 alt="placholder"
                 width={24}
@@ -27,6 +28,7 @@ const Footer = () => {
               </li>
               <li>
                 <Image
+                className=" cursor-pointer"
                 src="/icons/placeholder.svg"
                 alt="placholder"
                 width={24}
@@ -34,6 +36,7 @@ const Footer = () => {
               </li>
               <li>
                 <Image
+                className=" cursor-pointer"
                 src="/icons/placeholder.svg"
                 alt="placholder"
                 width={24}
@@ -41,6 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <Image
+                className="cursor-pointer"
                 src="/icons/placeholder.svg"
                 alt="placholder"
                 width={24}
