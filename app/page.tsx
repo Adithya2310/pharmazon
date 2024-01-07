@@ -122,7 +122,7 @@ export default function Home() {
             height={47}/>
         <div className='flex justify-between'>
         <h3 className='text-slate-800 text-4xl font-extrabold'>Simplified Online Healthcare Access</h3>
-        <button className='bg-amber-500 rounded-[10px] w-52 h-14'>Book an Appointment </button>
+        <button className='bg-amber-500 text-white rounded-[10px] w-52 h-14'>Book an Appointment </button>
         </div>
         <div className='flex justify-between'>
         <div className='mt-24 flex flex-col gap-7'>
@@ -233,7 +233,7 @@ export default function Home() {
           <p className='text-amber-500 text-[15px] font-bold mb-3'>Join with our Community</p>
           <h4 className='text-slate-800 text-5xl font-bold font mb-3'>Hassle-Free Booking <br /> at Your Fingertips</h4>
           <p className=' w-[500px] mt-3 text-slate-800 text-lg font-normal mb-3'>Explore our extensive network of skilled and accredited doctors from various hospitals. Find the perfect healthcare provider who matches your specific needs and preferences.</p>
-          <button className='bg-amber-500 rounded-[10px] h-12 w-80'>Book an Appointment </button>
+          <button className='bg-amber-500 text-white rounded-[10px] h-12 w-80'>Book an Appointment </button>
         </div>
         <Image
           src="/images/ending.svg"

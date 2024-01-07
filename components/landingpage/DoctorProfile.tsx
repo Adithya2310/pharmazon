@@ -22,7 +22,7 @@ const DoctorProfile = ({doctorPhoto,doctorName,clinicName,specialization,experie
           height={14}/>
           <p>Next Slot, {nextSlot.date}, {nextSlot.startTime} - {nextSlot.endTime}</p>
       </div>
-      <button className='w-full h-12 rounded bg-amber-500'>Book online</button>
+      <button className='w-full h-12 rounded text-white bg-amber-500'>Book online</button>
   </div>
   )
 }
