@@ -1,12 +1,26 @@
 'use client'
 import Image from 'next/image'
-import {specialties,doctors,nearByClinics} from "@/data";
+import {specialties,doctors,nearByClinics} from "@/lib/data/index";
+import DoctorProfile from '@/components/landingpage/DoctorProfile';
+import NearByClinics from '@/components/landingpage/NearByClinics';
 
 export default function Home() {
   return (
     <>
       {/* hero section */}
       <section className='w-[85%] mx-auto flex gap-16'>
+        <Image
+          className=' absolute right-36 top-14 -z-20'
+          src="/images/rhombus-full.svg"
+          alt="rhombus"
+          width={450}
+          height={450}/>
+        <Image
+          className=' absolute right-0 top-6 -z-20'
+          src="/images/rhombus.svg"
+          alt="rhombus"
+          width={450}
+          height={450}/>
         <div className='relative mt-16'>
           <h1 className='w-full text-slate-800 text-6xl font-bold leading-[72px] '>Stay at Home. <br />Consult Online</h1>
           <p className='w-full text-slate-800 text-xl font-normal'>Schedule Your Next Medical Visit Online Today</p>
@@ -19,9 +33,10 @@ export default function Home() {
                 width={26}/>
                 <select
                   className="appearance-none bg-transparent border-none leading-tight h-6 opacity-80 text-slate-500 text-xl font-normal focus:outline-none"
+                  value="Clinic"
+                  defaultValue="Clinic"
                 >
-                  <option className='h-6 opacity-80 text-slate-500 text-xl font-normal' value="" disabled selected>Clinics</option>
-                  {/* <option value="clinic1">Clinic 1</option> */}
+                  <option value="Clinic">Clinic</option>
                   {/* <option value="clinic2">Clinic 2</option> */}
                   {/* <option value="clinic3">Clinic 3</option> */}
                   {/* Add more options as needed */}
@@ -39,7 +54,7 @@ export default function Home() {
           </div>
         </div>
         <Image
-        className=' -z-10 right-20 absolute'
+        className=' -z-10 right-28 absolute'
          src="/hero.png"
          alt="hero images"
          width="780"
@@ -86,27 +101,9 @@ export default function Home() {
         <div className=' flex gap-7'>
           {doctors.map((doctor)=>{
             return (
-              <div className=' p-4'>
-                <Image
-                  className='rounded-[10px] mb-4'
-                  src={doctor.doctorPhoto}
-                  alt="doctor-image"
-                  width={300}
-                  height={174}/>
-                  <p className='text-amber-500 text-[13px] font-normal mb-2'>{doctor.clinicName}</p>
-                  <h4 className='text-slate-800 text-xl font-medium mb-2'>{doctor.doctorName}</h4>
-                  <p className='text-slate-800 text-[15px] font-normal mb-2'>{doctor.sepcialization}</p>
-                  <p className='text-slate-800 text-[15px] font-normal mb-5'>{doctor.experience} Years of Experience</p>
-                  <div className='flex text-slate-500 text-[13px] font-normal gap-2 mb-2'>
-                    <Image
-                      src="/icons/calender.svg"
-                      alt="calender"
-                      width={14}
-                      height={14}/>
-                      <p>Next Slot, {doctor.nextSlot.date}, {doctor.nextSlot.startTime} - {doctor.nextSlot.endTime}</p>
-                  </div>
-                  <button className='w-full h-12 rounded bg-amber-500'>Book online</button>
-              </div>
+              <DoctorProfile
+                key={doctor.doctorName}
+                {...doctor}/>
             )
           })}
         </div>
@@ -128,22 +125,27 @@ export default function Home() {
         <div className='flex gap-5 justify-between'>
           {nearByClinics.map((clinic)=>{
             return (
-              <div>
-                <Image
-                  className='rounded-tl-[10px] rounded-tr-[10px] object-cover mb-3 h-[200px]'
-                  src={clinic.image}
-                  alt="clinic-img"
-                  width={300}
-                  height={200}/>
-                  <h4 className='text-slate-800 text-xl font-bold mb-3 ml-4'>{clinic.name}</h4>
-                  <p className=' text-slate-500 text-base font-normal ml-4'>{clinic.specialisation}</p>
-              </div>
+              <NearByClinics
+                key={clinic.name}
+                {...clinic}/>
             )
           })}
         </div>
       </section>
       {/* tutorial */}
-      <section className=' mt-24 w-[85%] mx-auto'>
+      <section className='relative mt-24 w-[85%] mx-auto'>
+        <Image
+        className='absolute right-[410px] top-36 z-10'
+          src="/images/dots.svg"
+          alt="dots"
+          width={128}
+          height={128}/>
+          <Image
+          className=' absolute -right-9 bottom-16 -z-10'
+            src="/icons/green-mark.svg"
+            alt="green mark"
+            width={98}
+            height={47}/>
         <div className='flex justify-between'>
         <h3 className='text-slate-800 text-4xl font-extrabold'>Simplified Online Healthcare Access</h3>
         <button className='bg-amber-500 rounded-[10px] w-52 h-14'>Book an Appointment </button>

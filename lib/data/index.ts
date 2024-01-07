@@ -1,4 +1,5 @@
-export const specialties=[
+import { Specialty,Doctor, NearbyClinic } from "../types"
+export const specialties:Specialty[]=[
     {
         name:"Primary Care",
         src:"/images/primary-care.svg"
@@ -21,12 +22,12 @@ export const specialties=[
     }
 ]
 
-export const doctors=[
+export const doctors:Doctor[]=[
     {
         clinicName:"MED Care Clinic",
         doctorPhoto:"/images/doctors/1.jpeg",
         doctorName:"Dr. Sara Saginaw",
-        sepcialization:"Dermatology",
+        specialization:"Dermatology",
         experience:"15",
         nextSlot:{
             date: 'May 29',
@@ -38,7 +39,7 @@ export const doctors=[
         clinicName:"MED Care Clinic",
         doctorPhoto:"/images/doctors/2.jpeg",
         doctorName:"Dr. Judah Weinstein",
-        sepcialization:"General Medicine",
+        specialization:"General Medicine",
         experience:"15",
         nextSlot:{
             date: 'May 29',
@@ -48,7 +49,7 @@ export const doctors=[
     }
 ]
 
-export const nearByClinics=[
+export const nearByClinics:NearbyClinic[]=[
     {
         image:"/images/clinics/1.jpeg",
         name:"Medlife Care Clinic",
