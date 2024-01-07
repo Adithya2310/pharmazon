@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </section>
       {/* book an appointment*/}
-      <section className='w-[85%] mx-auto mt-24 flex flex-wrap gap-16 items-center'>
+      <section className='w-[85%] mx-auto mt-24 flex max-xl:flex-wrap gap-16 items-center'>
         <div className=' flex gap-7'>
           {doctors.map((doctor)=>{
             return (
