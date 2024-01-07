@@ -4,12 +4,13 @@ import {specialties,doctors,nearByClinics} from "@/lib/data/index";
 import DoctorProfile from '@/components/landingpage/DoctorProfile';
 import NearByClinics from '@/components/landingpage/NearByClinics';
 import Searchbar from '@/components/Searchbar';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <>
       {/* hero section */}
-      <section className='h-[39rem] bg-yellow-50'>
+      <section className='h-[39rem] bg-yellow-50  '>
         <div className='w-[85%]  mx-auto flex gap-16'>
         <Image
           className=' absolute right-36 top-14'
@@ -42,11 +43,15 @@ export default function Home() {
           <div className=' w-[65rem] h-[12rem] flex justify-center items-center bg-white rounded-[10px] opacity-100'>
             <div className=' flex items-center flex-col'>
               <div className=" w-[30rem] h-20 text-center text-slate-400 text-xl font-normal leading-loose mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
-              <button className='w-[27rem] h-16 bg-slate-800 rounded-[10px] text-center text-white text-2xl font-bold'>Book an Follow Up</button>
+              <Link href="https://www.youtube.com/@pharmazon457">
+              <button className='w-[27rem] h-16 bg-slate-800 rounded-[10px] text-center text-white text-2xl font-bold hover:bg-slate-900 transition-colors duration-300'>Book an Follow Up</button>
+              </Link>
             </div>
             <div className=' flex items-center flex-col'>
               <div className="w-[30rem] h-20 text-center text-slate-400 text-xl font-normal leading-loose mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
-              <button className='w-[27rem] h-16 bg-slate-800 rounded-[10px]  text-center text-white text-2xl font-bold'>Book an Follow Up</button>
+              <Link href="https://www.youtube.com/@pharmazon457">
+              <button className='w-[27rem] h-16 bg-slate-800 rounded-[10px]  text-center text-white text-2xl font-bold hover:bg-slate-900 transition-colors duration-300'>Book an Follow Up</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -87,7 +92,9 @@ export default function Home() {
         <div>
           <h2 className=' text-4xl font-bold mb-6 leading-[3rem]'>Book Your Next Medical <br />Visit Online Today!</h2>
           <p className='text-slate-800 text-lg font-normal mb-6 leading-[3rem]'>Explore their expertise, credentials, and specialties to <br /> find the right doctor for your healthcare needs.</p>
-          <button className='rounded-[5px] border border-slate-800 w-56 h-12'>See more Prescribers</button>
+          <Link href="prescribers">
+            <button className='rounded-[5px] border border-slate-800 hover:bg-slate-800 hover:text-white transition-colors duration-300 w-56 h-12'>See more Prescribers</button>
+          </Link>
         </div>
         </div>
 
@@ -96,10 +103,12 @@ export default function Home() {
       <section className='w-[85%] mx-auto mt-12 '>
         <div className='flex justify-between items-center mb-7 '>
           <div>
-          <h3 className='text-slate-800 text-3xl font-bold mb-5'>Explore Nearby Clinics</h3>
+          <h3 className='text-slate-800  text-3xl font-bold mb-5'>Explore Nearby Clinics</h3>
           <p className='text-slate-500 text-lg font-normal'>Your Gateway to Comprehensive Online Consultations</p>
           </div>
-          <button className='rounded-[5px] border border-slate-800 w-36 h-9'>See All Clinics</button>
+          <Link href="clinics">
+          <button className='rounded-[5px] border border-slate-800 hover:bg-slate-800 hover:text-white transition-colors duration-300 w-36 h-9'>See All Clinics</button>
+          </Link>
         </div>
         <div className='flex gap-5 justify-between'>
           {nearByClinics.map((clinic)=>{
@@ -128,7 +137,9 @@ export default function Home() {
             height={47}/>
         <div className='flex justify-between'>
         <h3 className='text-slate-800 text-4xl font-extrabold'>Simplified Online Healthcare Access</h3>
-        <button className='bg-amber-500 text-white rounded-[10px] w-52 h-14'>Book an Appointment </button>
+        <Link href="https://youtube.com">
+          <button className='bg-amber-500 opacity-90 hover:opacity-100 transition-opacity duration-300 text-white rounded-[10px] w-52 h-14'>Book an Appointment </button>
+        </Link>
         </div>
         <div className='flex justify-between'>
         <div className='mt-24 flex flex-col gap-7'>
@@ -242,7 +253,9 @@ export default function Home() {
           <p className='text-amber-500 text-sm font-bold mb-3'>Join with our Community</p>
           <h4 className='text-slate-800 text-5xl font-bold font mb-3'>Hassle-Free Booking <br /> at Your Fingertips</h4>
           <p className='w-[31rem] mt-3 text-slate-800 text-lg font-normal mb-3'>Explore our extensive network of skilled and accredited doctors from various hospitals. Find the perfect healthcare provider who matches your specific needs and preferences.</p>
-          <button className='bg-amber-500 text-white rounded-[10px] h-12 w-80'>Book an Appointment </button>
+          <Link href="https://youtube.com">
+            <button className='bg-amber-500 opacity-90 hover:opacity-100 transition-opacity duration-300 text-white rounded-[10px] h-12 w-80'>Book an Appointment </button>
+          </Link>
         </div>
         <Image
           src="/images/ending.svg"

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Doctor } from "@/lib/types"
+import Link from "next/link"
 
 const DoctorProfile = ({doctorPhoto,doctorName,clinicName,specialization,experience,nextSlot}:Doctor) => {
   return (
@@ -22,7 +23,9 @@ const DoctorProfile = ({doctorPhoto,doctorName,clinicName,specialization,experie
           height={14}/>
           <p>Next Slot, {nextSlot.date}, {nextSlot.startTime} - {nextSlot.endTime}</p>
       </div>
-      <button className='w-full h-12 rounded text-white bg-amber-500'>Book online</button>
+      <Link href="https://youtube.com">
+        <button className='w-full h-12 rounded text-white bg-amber-500 opacity-90 hover:opacity-100 transition-opacity duration-300'>Book online</button>
+      </Link>
   </div>
   )
 }

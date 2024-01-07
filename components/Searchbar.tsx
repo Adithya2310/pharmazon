@@ -42,7 +42,7 @@ const Searchbar = () => {
     <form className="flex" onSubmit={handleFormSubmit}>
         <input type="text" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} className=" bg-transparent outline-none placeholder:text-xl" placeholder="Search by Clinic name"/>
     </form>
-    <button onClick={handleFormSubmit} type="submit" className='px-9 py-2 bg-amber-500 text-white rounded-md justify-center items-center gap-2'>
+    <button onClick={handleFormSubmit} type="submit" className='px-9 py-2 bg-amber-500 opacity-90 hover:opacity-100 transition-opacity duration-300 text-white rounded-md justify-center items-center gap-2'>
           Find & Book
     </button>
   </div>
