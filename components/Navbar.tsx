@@ -24,8 +24,8 @@ const Navbar = () => {
           </Link>
         </ul>
         <div className='flex gap-5'>
-            <button className='text-center text-slate-800 text-lg hover:text-slate-900 transition-colors duration-300 font-medium'>Sign In</button>
-            <button className='w-32 h-12 bg-slate-800 rounded-[5px] text-white z-10 hover:bg-slate-900 transition-colors duration-300'>Register</button>
+            <button className='w-32 h-12 bg-transparent rounded-[5px] text-slate-800  z-10 text-lg font-medium hover:underline'>Sign In</button>
+            <button className='w-32 h-12 bg-slate-800 rounded-[5px] text-white z-10 text-lg font-medium hover:bg-slate-900 transition-colors duration-300'>Register</button>
         </div>
     </nav>
     </div>
