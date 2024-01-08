@@ -2,9 +2,9 @@ import Image from "next/image"
 import { NearbyClinic } from "@/lib/types";
 
 const NearByClinics = ({image,name,specialisation}:NearbyClinic) => {
-  return (<div>
+  return (<div className="bg-white pb-3 rounded-[10px] shadow-md">
     <Image
-      className='rounded-tl-[10px] rounded-tr-[10px] object-cover mb-3 h-48'
+      className='rounded-tl-[10px]  rounded-tr-[10px] object-cover mb-3 h-48'
       src={image}
       alt="clinic-img"
       width={300}
