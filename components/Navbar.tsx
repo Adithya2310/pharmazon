@@ -6,7 +6,7 @@ const Navbar = () => {
       <Link href="/">
         <h1 className='text-slate-800 text-3xl font-bold leading-loose cursor-pointer'>Pharmazon</h1>
       </Link>
-        <ul className='flex gap-5'>
+        <ul className='flex gap-10'>
           <Link href="/">
             <li className='text-center cursor-pointer text-slate-800 text-base font-normal hover:text-slate-900 transition-colors duration-300'>Home</li>
           </Link>

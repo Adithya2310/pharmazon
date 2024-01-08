@@ -38,23 +38,25 @@ export default function Home() {
          ></Image>
         </div>
       </section>
-      <div className="w-[75rem] h-[20rem] absolute left-[11%] top-[36rem]  flex items-center justify-center bg-[rgba(255,255,255,0.3)] rounded-[10px] mx-auto mt-14">
+      <div className='flex justify-center'>
+      <div className="w-[75rem] h-[20rem] absolute  top-[36rem]  flex items-center justify-center bg-[rgba(255,255,255,0.3)] rounded-[10px] mx-auto mt-14">
         <div className=' w-[70rem] h-[16rem] flex justify-center items-center bg-[rgba(255,255,255,0.6)] rounded-[10px] mx-auto my-auto'>
           <div className=' w-[65rem] h-[12rem] flex justify-center items-center bg-[#F9FDFF] rounded-[10px] opacity-100'>
             <div className=' border-r-2 border-white  flex items-center flex-col'>
-              <div className=" w-[30rem] h-20 text-center text-slate-400 text-xl font-normal leading-loose mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+              <div className=" w-[30rem] h-20 text-center text-blue-400 text-xl font-normal leading-loose mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
               <Link href="https://www.youtube.com/@pharmazon457">
               <button className='w-[27rem] h-16 bg-slate-800 rounded-[10px] text-center text-white text-2xl font-bold hover:bg-slate-900 transition-colors duration-300'>Book an Follow Up</button>
               </Link>
             </div>
-            <div className='border-r-2 border-white flex items-center flex-col'>
-              <div className="w-[30rem] h-20 text-center text-slate-400 text-xl font-normal leading-loose mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+            <div className='border-r-2 border-white  flex items-center flex-col'>
+              <div className="w-[30rem] h-20 text-center text-blue-400 text-xl font-normal leading-loose mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
               <Link href="https://www.youtube.com/@pharmazon457">
               <button className='w-[27rem] h-16 bg-slate-800 rounded-[10px]  text-center text-white text-2xl font-bold hover:bg-slate-900 transition-colors duration-300'>Book an Follow Up</button>
               </Link>
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       {/* Specialties section */}
